@@ -5,8 +5,6 @@ import axios from 'axios'
 import CitiesList from '../../components/CitiesList/CitiesList'
 
 import constants from '../../constants'
-
-
 import './Home.css'
 
 export default function Home() {
@@ -16,7 +14,6 @@ export default function Home() {
 
     async function handleSearchForWeather() {
         const weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${pin.lat}&lon=${pin.lng}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
-        console.log(weatherReturn)
         setCitiesList(weatherReturn.data.list)
     }
 
@@ -26,6 +23,7 @@ export default function Home() {
 
     return (
         <div className="home-container">
+
             <div className="home-title">
                 <div className="home-title-span">
                     <span>Please, select a location and click on "Search" to see their weather</span>
@@ -34,8 +32,9 @@ export default function Home() {
                     <div onClick={handleSearchForWeather}>Search</div>
                 </div>
             </div>
+
             <div className="home-body">
-                <GoogleMaps defaultCenter={{ lat: 36.366717, lng: 138.743049 }} defaultZoom={4} updateMarker={updateMarker} />
+                <GoogleMaps defaultCenter={{ lat: 36.366717, lng: 138.743049 }} defaultZoom={4} updateMarker={updateMarker} showMarker={true} />
                 <CitiesList cities={citiesList} />
             </div>
 

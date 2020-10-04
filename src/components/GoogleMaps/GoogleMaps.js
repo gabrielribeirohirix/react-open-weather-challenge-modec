@@ -8,6 +8,7 @@ import constants from '../../constants'
 export default function GoogleMaps(props) {
 
     let [pin, setPin] = useState({})
+    
     const defaultCenter = props.defaultCenter
     const defaultZoom = props.defaultZoom
 
@@ -33,7 +34,7 @@ export default function GoogleMaps(props) {
                 onGoogleAPILoaded={(map, maps) => handleAPILoaded(map, maps)}
                 onClick={addPinToMap}>
 
-                <Marker lat={pin ? pin.lat : null} lng={pin ? pin.lng : null}/>
+                {props.showMarker && pin.lat && pin.lng && <Marker lat={pin.lat} lng={pin.lng}/>}
 
             </GoogleMapReact>
         </div>

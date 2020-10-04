@@ -3,7 +3,7 @@ Used Things
 react-router-dom plugin
 axios plugin
 google-maps api
-react-seçect plugin
+react-select plugin
 
 
 background animated:
