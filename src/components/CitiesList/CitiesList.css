@@ -1,0 +1,44 @@
+.cities-list-container {
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 20vw;
+  height: 80vh;
+  box-shadow: 1px 1px 4px 0 rgb(200, 200, 200);
+}
+
+.cities-list-body {
+  overflow-y: auto;
+  height: 70vh;
+}
+
+.cities-list-body a {
+  text-decoration: none;
+}
+
+.cities-list-title {
+  margin: 0 auto;
+  display: grid;
+  width: fit-content;
+  padding: 10px;
+  text-align: center;
+}
+
+.cities-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ade8f4;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 1px 1px 3px 0 rgb(200, 200, 200);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  color: #03045e;
+}
+
+.cities-list-item:hover {
+  transform: scale(1.05);
+  color: #03045e;
+}

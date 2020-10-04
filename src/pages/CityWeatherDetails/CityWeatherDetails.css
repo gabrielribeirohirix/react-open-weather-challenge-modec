@@ -1,0 +1,62 @@
+.city-weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.city-weather-title {
+  font-size: 26px;
+  font-family: "Roboto-700", sans-serif;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.city-weather-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  width: 940px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.weather-card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  width: 30%;
+  margin: 5px;
+  font-size: 14px;
+  box-shadow: 1px 2px 3px 0 rgb(200, 200, 200);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.weather-card span {
+  text-align: center;
+}
+
+.weather-card-field {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.weather-card-field span:first-child {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.weather-card-field span:last-child {
+  font-size: 12px;
+  background: #caf0f8;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 940px) {
+  .weather-card {
+    width: 60vw;
+  }
+}

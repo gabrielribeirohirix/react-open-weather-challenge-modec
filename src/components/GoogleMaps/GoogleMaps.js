@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
 import Marker from './Marker'
 import './GoogleMaps.css'
@@ -8,30 +8,32 @@ import constants from '../../constants'
 export default function GoogleMaps(props) {
 
     let [pin, setPin] = useState({})
+    const defaultCenter = props.defaultCenter
+    const defaultZoom = props.defaultZoom
 
     const handleAPILoaded = (map, maps) => {
         console.log("Map is ready!")
     };
 
     const addPinToMap = pinReturn => {
-        setPin({lat: pinReturn.lat ,lng: pinReturn.lng})
-        props.updateMarker(pinReturn)
+        setPin({ lat: pinReturn.lat, lng: pinReturn.lng })
+
+        if (props.updateMarker) {
+            props.updateMarker(pinReturn)
+        }
     }
 
     return (
         <div className="map-container">
             <GoogleMapReact
                 bootstrapURLKeys={{ key: constants.googleMapsAPIKey }}
-                defaultCenter={{ lat: 36.366717, lng: 138.743049 }}
-                defaultZoom={4}
+                defaultCenter={defaultCenter}
+                defaultZoom={defaultZoom}
                 yesIWantToUseGoogleMapApiInternals
                 onGoogleAPILoaded={(map, maps) => handleAPILoaded(map, maps)}
                 onClick={addPinToMap}>
 
-                <Marker
-                lat={pin.lat}
-                lng={pin.lng}
-                text="" />
+                <Marker lat={pin ? pin.lat : null} lng={pin ? pin.lng : null}/>
 
             </GoogleMapReact>
         </div>
