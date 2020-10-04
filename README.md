@@ -4,7 +4,7 @@ react-router-dom plugin
 axios plugin
 google-maps api
 react-select plugin
-
+heroku to host the site
 
 background animated:
 https://www.youtube.com/watch?v=CFAmsTzzMbE&ab_channel=u%C4%9Furbozkan

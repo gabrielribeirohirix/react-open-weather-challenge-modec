@@ -2,7 +2,7 @@
   margin: 0 10px;
   background-color: #fff;
   border-radius: 5px;
-  width: 20vw;
+  width: 25vw;
   height: 80vh;
   box-shadow: 1px 1px 4px 0 rgb(200, 200, 200);
 }
@@ -31,7 +31,7 @@
   background-color: #ade8f4;
   padding: 10px;
   border-radius: 5px;
-  margin: 10px;
+  margin: 10px 15px;
   box-shadow: 1px 1px 3px 0 rgb(200, 200, 200);
   transition: all 0.4s ease-in-out;
   cursor: pointer;
@@ -43,7 +43,7 @@
   color: #03045e;
 }
 
-.no-data{
+.no-data {
   color: rgb(200, 200, 200);
   font-size: 10px;
   display: grid;

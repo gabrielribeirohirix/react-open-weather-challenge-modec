@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 78.6vw;
+  width: 78.5vw;
   margin: 25px 0;
 }
 
@@ -34,21 +34,51 @@
 .home-title-button div {
   padding: 8px 30px;
   border-radius: 5px;
-  background: #48cae4;
+  background: #0077b6;
+  width: -moz-fit-content;
   width: fit-content;
-  color: #023e8a;
-
-  transition: all .4s ease-in-out;
+  color: #fff;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
+  box-shadow: 1px 2px 3px 0 #023e8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.home-title-button div:hover{
+.home-title-button div:hover {
   transform: scale(1.05);
   font-weight: 400;
 }
 
 .home-body {
   width: 80vw;
-  height: 80vh;
+  height: 100%;
   display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .home-title {
+    flex-direction: column;
+  }
+
+  .home-title-button{
+    margin-top: 20px;
+    width: 200px;
+  }
+
+  .home-title-button > div{
+    width: 200px;
+  }
+
+  .home-body {
+    flex-direction: column;
+  }
+
+  .cities-list-container {
+    width: 90%;
+    margin-top: 20px;
+  }
 }

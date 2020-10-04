@@ -22,6 +22,7 @@ export default function Home() {
     }
 
     return (
+
         <div className="home-container">
 
             <div className="home-title">

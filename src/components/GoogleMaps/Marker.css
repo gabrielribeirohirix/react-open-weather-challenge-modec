@@ -1,0 +1,29 @@
+.marker-container {
+  width: 54px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+.marker-img {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  z-index: 999;
+  position: relative;
+}
+
+.ballon-point {
+  width: 15px;
+  height: 15px;
+  margin: -8px 0 0 20px;
+  position: relative;
+  background-color: #fff;
+  transform: rotate(45deg);
+  border-right: 1px solid rgb(200, 200, 200);
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
