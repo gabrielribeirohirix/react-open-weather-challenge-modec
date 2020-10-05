@@ -3,7 +3,7 @@
 </div>
 
 <div width="100%" align="center">
-    <img width="256px" height="256px" src="https://avatars1.githubusercontent.com/u/58861192?v=4">
+    <img width="256px" height="256px" src="src/assets/images/avatar_image.png">
 </div>
 
 <br>
@@ -111,6 +111,24 @@
         <span>I used Heroku Continuous Integration (CI) with GitHub repository, then when I push some new implementations, application version or whatever on the branch "master", in this moment Heroku start their job and deploy a new application version. </span>
     </li>
 </ul>
+
+<br>
+<br>
+
+<br>
+<br>
+<div align="center">
+    <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/3209/3209195.svg"/>
+    <h2>Workflow | Agile Methodology</h2>
+</div>
+<br>
+
+<span>I already used Jira, Trello and other project management tools with agile methodology, but for this project I used one of the best organization frameworks that I know, It's called Notion. I added a board with all of the pending ticket / tasks. See the image below about my organization for this project.</span>
+
+<br>
+<div width="100%" align="center">
+    <img src="src/assets/images/notion_openweather_board.PNG">
+</div>
 
 <br>
 <br>
