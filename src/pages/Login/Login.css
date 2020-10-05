@@ -18,6 +18,13 @@
   z-index: 1;
 }
 
+.open-weather-logo {
+  z-index: 2;
+  width: 320px;
+  position: fixed;
+  margin-top: -145px;
+}
+
 .login-title {
   text-align: center;
   z-index: 2;
@@ -25,21 +32,26 @@
   font-weight: 500 !important;
   font-size: 30px;
   color: #03045e;
-  margin-bottom: 80px;
+  padding: 0 20px;
+  position: absolute;
+  margin-top: -20px;
 }
 
 .title-container {
-  background-color: #ffffff;
+  background-color: #0096c7;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 700px;
-  height: 200px;
+  width: -webkit-fill-available;
+  height: 280px;
   position: absolute;
   border-radius: 10px;
   padding: 20px;
   z-index: 1;
-  opacity: 0.5;
+  opacity: 0.6;
+  margin: 10px;
+  max-width: 700px;
+  box-shadow: 1px 2px 2px 0 #03045e;
 }
 
 .get-started-button {
@@ -53,6 +65,8 @@
   box-shadow: 1px 2px 3px 0 #023e8a;
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: 180px;
+  position: fixed;
 }
 
 .get-started-button:hover {

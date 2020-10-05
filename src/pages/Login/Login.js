@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import constants from '../../constants'
+
 import backgroundVideo from '../../assets/videos/clouds_video.mp4'
 
 import './Login.css'
@@ -17,7 +19,8 @@ export default function Login() {
                 autoPlay
                 muted/>
             <div className="title-container" />
-            <span className="login-title">Hello! Be welcome to my OpenWeather Challenge!</span>
+            <img className="open-weather-logo" src={constants.openWeatherLogoUrl} alt="Open Weather Logo" />
+            <span className="login-title">Welcome to my OpenWeather Challenge!</span>
             <div onClick={() => onNavigate("/Home")} className="get-started-button">
                 <span>Get Started</span>
             </div>

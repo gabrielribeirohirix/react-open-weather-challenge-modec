@@ -20,10 +20,10 @@
 .city-weather-body {
   display: flex;
   flex-wrap: wrap;
-  justify-content: baseline;
-  width: 80vw;
+  width: 75vw;
   margin: 10px 0;
   justify-content: center;
+  align-items: center;
 }
 
 .weather-card {
@@ -31,6 +31,7 @@
   border-radius: 5px;
   padding: 10px;
   width: 30%;
+  height: 140px;
   margin: 5px;
   font-size: 14px;
   box-shadow: 1px 2px 3px 0 rgb(200, 200, 200);
@@ -45,6 +46,8 @@
 .weather-card-field {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 10px;
   text-transform: capitalize;
 }
@@ -52,13 +55,20 @@
 .weather-card-field span:first-child {
   font-size: 12px;
   margin-bottom: 5px;
+  color: #023e8a;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .weather-card-field span:last-child {
-  font-size: 12px;
-  background: #caf0f8;
+  font-size: 14px;
+  background: #ade8f4;
   border-radius: 5px;
   padding: 5px;
+  font-weight: 400;
+  width: -webkit-fill-available;
+  box-shadow: 1px 1px 4px 0 #023e8a;
+  max-width: 200px;
 }
 
 .measure-combobox {
@@ -66,7 +76,16 @@
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 940px) {
+.city-weather-details-map {
+  width: 75vw;
+  height: 65vh;
+}
+
+@media only screen and (max-width: 1220px) {
+  .city-weather-body {
+    flex-direction: column;
+  }
+
   .weather-card {
     width: 60vw;
   }

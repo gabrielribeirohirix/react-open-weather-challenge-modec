@@ -26,4 +26,5 @@
   transform: rotate(45deg);
   border-right: 1px solid rgb(200, 200, 200);
   border-bottom: 1px solid rgb(200, 200, 200);
+  border-radius: 0 !important;
 }

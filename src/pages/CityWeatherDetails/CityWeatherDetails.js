@@ -118,8 +118,9 @@ export default function CityWeatherDetails() {
                 </div>
             </div>
 
-            <GoogleMaps defaultCenter={{ lat: city.coord.lat, lng: city.coord.lon }} defaultZoom={6} showMarker={true} pin={{ lat: city.coord.lat, lng: city.coord.lon, countryCode: city.sys.country }} />
-
+            <div className="city-weather-details-map">
+                <GoogleMaps defaultCenter={{ lat: city.coord.lat, lng: city.coord.lon }} defaultZoom={6} showMarker={true} pin={{ lat: city.coord.lat, lng: city.coord.lon, countryCode: city.sys.country }} />
+            </div>
         </div>
     )
 

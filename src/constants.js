@@ -3,6 +3,7 @@ const constants = {
     googleMapsAPIKey: "AIzaSyAUkcQtF2LtiuBEBaTCohAmgPvFPYjH-UM",
     openWeatherAPIKey: "b3aaffea2627fb905a2a099897db3009",
     openWeatherAPIUrl: "https://api.openweathermap.org/data/2.5/find?",
+    openWeatherLogoUrl: "https://brands.home-assistant.io/_/openweathermap/logo.png",
     temperatureConversionArray: [
         { value: "celsius", label: "Celsius" },
         { value: "kelvin", label: "Kelvin" },
