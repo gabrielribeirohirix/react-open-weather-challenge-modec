@@ -1,5 +1,5 @@
 import React from 'react'
-import { onNavitate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import backgroundVideo from '../../assets/videos/clouds_video.mp4'
 import './Login.css'
@@ -13,7 +13,8 @@ export default function Login() {
             <video src={backgroundVideo}
                 className="background-video-login"
                 loop
-                autoPlay />
+                autoPlay
+                muted/>
             <div className="title-container" />
             <span className="login-title">Hello! Be welcome to my OpenWeather Challenge!</span>
             <div onClick={() => onNavigate("/Home")} className="get-started-button">

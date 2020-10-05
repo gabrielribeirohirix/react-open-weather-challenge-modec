@@ -10,19 +10,34 @@
 .home-title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 78.5vw;
   margin: 25px 0;
 }
 
-.home-title-span {
-  color: #023e8a;
-  font-size: 20px;
-  font-weight: 500;
-  text-align: center;
-  width: 60vw;
+.home-title-descriptions {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  line-height: 20px;
+  text-align: left;
+  align-items: end;
+}
+
+.home-title-header {
+  font-weight: 500;
+  color: #023e8a;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.home-title-item {
+  color: rgb(160, 160, 160);
+  font-size: 14px;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 5px;
 }
 
 .home-title-button {
@@ -32,7 +47,7 @@
 }
 
 .home-title-button div {
-  padding: 8px 30px;
+  padding: 15px 60px;
   border-radius: 5px;
   background: #0077b6;
   width: -moz-fit-content;
@@ -44,7 +59,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .home-title-button div:hover {
@@ -59,17 +73,17 @@
 }
 
 @media only screen and (max-width: 800px) {
-
   .home-title {
     flex-direction: column;
+    align-items: center;
   }
 
-  .home-title-button{
+  .home-title-button {
     margin-top: 20px;
     width: 200px;
   }
 
-  .home-title-button > div{
+  .home-title-button > div {
     width: 200px;
   }
 

@@ -9,7 +9,7 @@ const constants = {
         { value: "fahrenheit", label: "Fahrenheit" }
     ],
     googleMapsGetCountryUrl: "https://maps.googleapis.com/maps/api/geocode/json?",
-    defaultFlagImage: "https://findicons.com/files/icons/2222/gloss_basic/32/flag_grey.png"
+    defaultFlagImage: "https://www.flaticon.com/svg/static/icons/svg/3498/3498149.svg"
 
 }
 

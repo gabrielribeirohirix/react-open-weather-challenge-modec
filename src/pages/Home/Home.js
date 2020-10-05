@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
+
 import axios from 'axios'
+import sweetAlert from '@sweetalert/with-react'
 
 import CitiesList from '../../components/CitiesList/CitiesList'
 
@@ -13,8 +15,18 @@ export default function Home() {
     let [citiesList, setCitiesList] = useState([])
 
     async function handleSearchForWeather() {
-        const weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${pin.lat}&lon=${pin.lng}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
-        setCitiesList(weatherReturn.data.list)
+
+        let weatherReturn = {}
+        try {
+            weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${pin.lat}&lon=${pin.lng}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
+            setCitiesList(weatherReturn.data.list)
+        } catch (error) {
+            sweetAlert('No Cities were found for this location', {
+                icon: "error",
+                timer: 3000
+            })
+        }
+
     }
 
     function updateMarker(pin) {
@@ -26,8 +38,11 @@ export default function Home() {
         <div className="home-container">
 
             <div className="home-title">
-                <div className="home-title-span">
-                    <span>Please, select a location and click on "Search" to see their weather</span>
+                <div className="home-title-descriptions">
+                    <span className="home-title-header">Follow these steps described below to see the weather on your chosen City:</span>
+                    <span className="home-title-item">Add a pin on the map.</span>
+                    <span className="home-title-item">Click on "Search" to see the 15 (or less) nearest Cities on the list.</span>
+                    <span className="home-title-item">Click in one of these Cities to see the weather.</span>
                 </div>
                 <div className="home-title-button">
                     <div onClick={handleSearchForWeather}>Search</div>

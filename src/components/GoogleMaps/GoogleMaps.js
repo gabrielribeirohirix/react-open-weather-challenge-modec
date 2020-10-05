@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import GoogleMapReact from 'google-map-react'
 import axios from 'axios'
 
@@ -10,17 +10,20 @@ import constants from '../../constants'
 export default function GoogleMaps(props) {
 
     let [pin, setPin] = useState({})
-    
     const defaultCenter = props.defaultCenter
     const defaultZoom = props.defaultZoom
+
+    useEffect(() => {
+        if(props.pin){
+            setPin({ lat: props.pin.lat, lng: props.pin.lng, countryCode: props.pin.countryCode })
+        }
+    }, [])
 
     const handleAPILoaded = (map, maps) => {
         console.log("Map is ready!")
     };
 
     const addPinToMap = async pinReturn => {
-
-        // 'https://maps.googleapis.com/maps/api/geocode/json?latlng=11.2742848,75.8013801&key=YOUR_API_KEY_HERE'
 
         if (props.updateMarker) {
 

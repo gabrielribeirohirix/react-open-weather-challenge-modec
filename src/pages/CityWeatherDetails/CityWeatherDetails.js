@@ -29,13 +29,20 @@ export default function CityWeatherDetails() {
 
             case "fahrenheit":
                 return ((value - 273.15) * 9 / 5 + 32).toFixed(2) + '°F'
+
+            default:
+                return value.toFixed(2)
         }
 
     }
 
     return (
         <div className="city-weather">
-            <span className="city-weather-title">{`${city.name}, ${city.sys.country}`}</span>
+
+            <div className="city-weather-title-container">
+                <span className="city-weather-title">{`${city.name}, ${city.sys.country}`}</span>
+                <img alt="city" src={city.sys.country ? `https://www.countryflags.io/${city.sys.country}/shiny/64.png` : constants.defaultFlagImage} />
+            </div>
 
             <Select className="measure-combobox"
                 options={constants.temperatureConversionArray}
@@ -109,7 +116,7 @@ export default function CityWeatherDetails() {
                 </div>
             </div>
 
-            <GoogleMaps defaultCenter={{ lat: city.coord.lat, lng: city.coord.lon }} defaultZoom={6} showMarker={false} />
+            <GoogleMaps defaultCenter={{ lat: city.coord.lat, lng: city.coord.lon }} defaultZoom={6} showMarker={true} pin={{ lat: city.coord.lat, lng: city.coord.lon, countryCode: city.sys.country }} />
 
         </div>
     )
