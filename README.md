@@ -1,5 +1,8 @@
 Used Things
 
+
+Git for control project versions
+GitHub to put the project's code
 react-router-dom plugin
 axios plugin
 google-maps api
