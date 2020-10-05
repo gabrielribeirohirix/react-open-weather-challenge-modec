@@ -4,9 +4,11 @@
 
 <div width="100%" align="center">
     <img width="256px" height="256px" src="src/assets/images/avatar_image.png">
+    <br>
+    <br>
+    <h2>Gabriel Ribeiro</h2>
 </div>
 
-<br>
 <br>
 
 <div align="center">
@@ -55,7 +57,7 @@
 <ul>
     <li>
         <h3>ReactJs</h3>
-        <span>To start, I used React Js to do all issues of the challenge (I also did some projects using React, it's an easy and powerful framework)</span>
+        <span>To start, I used React Js to do all issues of the challenge (I also did some projects using React, it's an easy and powerful framework).</span>
     </li>
     <br>
     <li>
@@ -67,17 +69,17 @@
     <li>
         <h3>React Router</h3>
         <span>This React plugin is a powerful plugin to give your application the total control about routes, URLs, parameter pass and more.</span>
-        <span>Version used: The "newest" - v6 (With useNavigate and other new good functions)</span>
+        <span>Version used: The "newest" - v6 (With useNavigate and other new good functions).</span>
     </li>
     <br>
     <li>
         <h3>React Hooks</h3>
-        <span>React Hooks brought to React many facilities that before we spend some time with. (useEffect for example, props through function params... Now we can create components based only in functions easily)</span>
+        <span>React Hooks brought to React many facilities that before we spend some time with. (useEffect for example, props through function params... Now we can create components based only in functions easily).</span>
     </li>
     <br>
     <li>
         <h3>Axios</h3>
-        <span>I think this is the best plugin for HTTP request, I use it in all of my projects (since in personal mobile applications that I already did with React Native)</span>
+        <span>I think this is the best plugin for HTTP request, I use it in all of my projects (since in personal mobile applications that I already did with React Native).</span>
     </li>
     <br>
     <li>
@@ -88,7 +90,7 @@
     <li>
         <h3>Country Flags API</h3>
         <span>To get country flags on map click, I used this amazing API that return a flag based on the attributes that you add in URL.</span>
-        <span>You can access this API <a href="https://www.countryflags.io/">here</a></span>
+        <span>You can access this API <a href="https://www.countryflags.io/">here</a> .</span>
     </li>
     <br>
     <li>
@@ -124,6 +126,9 @@
 <br>
 
 <span>I already used Jira, Trello and other project management tools with agile methodology, but for this project I used one of the best organization frameworks that I know, It's called Notion. I added a board with all of the pending ticket / tasks. See the image below about my organization for this project.</span>
+<br>
+<br>
+<span>See <a href="https://www.notion.so/">Notion Website</a> here.</span>
 
 <br>
 <div width="100%" align="center">

@@ -24,7 +24,7 @@ export default function CityWeatherDetails() {
         switch (measure) {
 
             case "celsius":
-                return ((value - 273.15) < 0 ? 0 : value - 273.15).toFixed(2) + '°C'
+                return (value - 273.15).toFixed(2) + '°C'
 
             case "kelvin":
                 return value.toFixed(2) + 'K'
