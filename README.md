@@ -1,19 +1,19 @@
 <h1 style="text-align: center;">Hey! Welcome to my OpenWeather Challenge</h1>
 
-<div style="width: 100%; display: flex; justify-content: center;">
-    <img src="https://avatars1.githubusercontent.com/u/58861192?v=4" style="border-radius: 50%; width: 256px; height: 256px">
+<div width="100%" style="display: flex; justify-content: center;">
+    <img width="256px" height="256px" src="https://avatars1.githubusercontent.com/u/58861192?v=4" style="border-radius: 50%;">
 </div>
 
 <div style="display: flex; align-items: center; justify-content: center; margin: 20px 0 80px 0;">
     <a href="https://github.com/gabrielcarreiraribeiro">
         <div style="display: flex; align-items: center; background-color: #fff; border-radius: 5px; padding: 5px 10px; margin-right: 15px;">
-            <img style="width: 32px; height: 32px; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg"/>
+            <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg"/>
             <span style="color: black; font-weight: 500;">GitHub</span>
         </div>
     </a>
     <a href="https://www.linkedin.com/in/gabrielcarreiraribeiro">
         <div style="display: flex; align-items: center; background-color: #0077B7; border-radius: 5px; padding: 5px 10px;">
-            <img style="width: 32px; height: 32px; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/2111/2111532.svg"/>
+            <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/2111/2111532.svg"/>
             <span style="color: black; font-weight: 500;">LinkedIn</span>
         </div>
     </a>
@@ -27,7 +27,7 @@
 <br>
 
 <div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
-    <img style="width: 32px; height: 32px; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176218.svg"/>
+    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176218.svg"/>
     <h2>Description</h2>
 </div>
 <span>This application is focused on get the weather of a City.</span>
@@ -36,7 +36,7 @@
 <br>
 
 <div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
-    <img style="width: 32px; height: 32px; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/900/900618.svg"/>
+    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/900/900618.svg"/>
     <h2>Technologies</h2>
 </div>
 
@@ -76,10 +76,7 @@
     </li>
     <br>
     <li>
-        <div style="display: flex; align-items: center;">
-            <img style="margin-right: 5px;" src="https://www.countryflags.io/JP/shiny/48.png"/>
-            <h3>Country Flags API</h3>
-        </div>
+        <h3>Country Flags API</h3>
         <span>To get country flags on map click, I used this amazing API that return a flag based on the attributes that you add in URL.</span>
         <span>You can access this API <a href="https://www.countryflags.io/">here</a></span>
     </li>
@@ -107,14 +104,14 @@
 <br>
 
 <div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
-    <img style="width: 32px; height: 32px; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/922/922656.svg"/>
+    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/922/922656.svg"/>
     <h2>How to Run</h2>
 </div>
 
 <span>Like I said, the application is hosted on Heroku, and you can access clicking on this button below.</span>
 <br>
 <br>
-<div style="display: flex; justify-content: center; width: 100%;">
+<div  width="100%" style="display: flex; justify-content: center;">
     <a href="https://react-open-weather-challenge.herokuapp.com/">
         <div style="border-radius: 5px; color: #fff; padding: 10px; background-color: #0077b6; width: fit-content; text-decoration: none;">OpenWeather Challenge</div>
     </a>
@@ -123,7 +120,7 @@
 <br>
 
 <div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
-    <img style="width: 32px; height: 32px; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/2716/2716350.svg"/>
+    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/2716/2716350.svg"/>
     <h2>Performance Test</h2>
 </div>
 
@@ -135,7 +132,7 @@
 
 
 <div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
-    <img style="width: 32px; height: 32px; margin-right: 10px;" src="https://www.flaticon.com/premium-icon/icons/svg/2099/2099430.svg"/>
+    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/premium-icon/icons/svg/2099/2099430.svg"/>
     <h2>Considerations</h2>
 </div>
 
