@@ -1,20 +1,22 @@
-<h1 style="text-align: center;">Hey! Welcome to my OpenWeather Challenge</h1>
+<div align="center">
+    <h1>Hey! Welcome to my OpenWeather Challenge</h1>
+</div>
 
-<div width="100%" style="justify-content: center;">
-    <img width="256px" height="256px" src="https://avatars1.githubusercontent.com/u/58861192?v=4" style="border-radius: 50%;">
+<div width="100%" align="center">
+    <img width="256px" height="256px" src="https://avatars1.githubusercontent.com/u/58861192?v=4">
 </div>
 
 <div>
     <a href="https://github.com/gabrielcarreiraribeiro">
         <div">
-            <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg"/>
-            <span style="color: black; font-weight: 500;">GitHub</span>
+            <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg"/>
+            <span>GitHub</span>
         </div>
     </a>
     <a href="https://www.linkedin.com/in/gabrielcarreiraribeiro">
         <div>
-            <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/2111/2111532.svg"/>
-            <span style="color: black; font-weight: 500;">LinkedIn</span>
+            <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/2111/2111532.svg"/>
+            <span>LinkedIn</span>
         </div>
     </a>
 </div>
@@ -27,7 +29,7 @@
 <br>
 
 <div align="center">
-    <img width="32px" height="32px" style="float: left; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176218.svg"/>
+    <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176218.svg"/>
     <h2>Description</h2>
 </div>
 
@@ -37,7 +39,7 @@
 <br>
 
 <div align="center">
-    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/900/900618.svg"/>
+    <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/900/900618.svg"/>
     <h2>Technologies</h2>
 </div>
 
@@ -105,7 +107,7 @@
 <br>
 
 <div align="center">
-    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/922/922656.svg"/>
+    <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/922/922656.svg"/>
     <h2>How to Run</h2>
 </div>
 
@@ -121,7 +123,7 @@
 <br>
 
 <div align="center">
-    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/2716/2716350.svg"/>
+    <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/2716/2716350.svg"/>
     <h2>Performance Test</h2>
 </div>
 
@@ -133,7 +135,7 @@
 
 
 <div align="center">
-    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/premium-icon/icons/svg/2099/2099430.svg"/>
+    <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/3062/3062779.svg"/>
     <h2>Considerations</h2>
 </div>
 
