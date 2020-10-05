@@ -1,4 +1,5 @@
 import React from 'react'
+
 import constants from '../../constants'
 
 import './Marker.css'

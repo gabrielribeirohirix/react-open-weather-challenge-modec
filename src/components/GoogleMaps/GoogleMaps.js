@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react'
 import axios from 'axios'
 
 import Marker from './Marker'
+
 import './GoogleMaps.css'
 
 import constants from '../../constants'

@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import backgroundVideo from '../../assets/videos/clouds_video.mp4'
+
 import './Login.css'
 
 export default function Login() {

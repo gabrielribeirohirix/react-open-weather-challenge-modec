@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
 import Select from 'react-select'
-import './CityWeatherDetails.css'
+
+import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
 
 import constants from '../../constants'
+
+import './CityWeatherDetails.css'
 
 export default function CityWeatherDetails() {
 

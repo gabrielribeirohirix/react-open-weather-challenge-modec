@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
-
 import axios from 'axios'
 import sweetAlert from '@sweetalert/with-react'
 
+import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
 import CitiesList from '../../components/CitiesList/CitiesList'
 
 import constants from '../../constants'
+
 import './Home.css'
 
 export default function Home() {

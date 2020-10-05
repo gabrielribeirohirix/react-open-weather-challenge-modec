@@ -10,7 +10,6 @@ const constants = {
     ],
     googleMapsGetCountryUrl: "https://maps.googleapis.com/maps/api/geocode/json?",
     defaultFlagImage: "https://www.flaticon.com/svg/static/icons/svg/3498/3498149.svg"
-
 }
 
 export default constants
