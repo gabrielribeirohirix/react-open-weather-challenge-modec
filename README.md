@@ -6,18 +6,15 @@
     <img width="256px" height="256px" src="https://avatars1.githubusercontent.com/u/58861192?v=4">
 </div>
 
-<div>
+<div align="center">
     <a href="https://github.com/gabrielcarreiraribeiro">
-        <div">
-            <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg"/>
-            <span>GitHub</span>
-        </div>
+        <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg"/>
+        <span>GitHub</span>
     </a>
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="https://www.linkedin.com/in/gabrielcarreiraribeiro">
-        <div>
-            <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/2111/2111532.svg"/>
-            <span>LinkedIn</span>
-        </div>
+        <img width="32px" height="32px" src="https://www.flaticon.com/svg/static/icons/svg/174/174857.svg"/>
+        <span>LinkedIn</span>
     </a>
 </div>
 
