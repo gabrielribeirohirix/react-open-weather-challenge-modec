@@ -50,7 +50,7 @@
 </div>
 <br>
 
-<span>I'll list here all of the technologies that I used to do this application, including frameworks and plugins.</span>
+<span>I'll list here all of the technologies that I used to create this application, including frameworks and plugins.</span>
 
 <ul>
     <li>
@@ -105,6 +105,8 @@
     <li>
         <h3>Heroku</h3>
         <span>I used Heroku to host this application because I think is a good and safe platform and because I want you to put hands-on and test yourselves.</span>
+        <br>
+        <br>
         <h4>Note:</h4>
         <span>I used Heroku Continuous Integration (CI) with GitHub repository, then when I push some new implementations, application version or whatever on the branch "master", in this moment Heroku start their job and deploy a new application version. </span>
     </li>
@@ -158,7 +160,11 @@
 </div>
 <br>
 
-<span>First of all, I want to thank you for the invitation to participate in this challenge, I'm very happy about the result and very impressed for did all of this things only on saturday and sunday, I really didn't expected this result on this short time.
+<span>First of all, I want to thank Modec for the invitation to participate in this challenge, I'm very happy about the result.
+<br>
+<span>I like ReactJS, I think this is a good framework to develop websites and I'm very comfortable to work with. Actually I don't use on my work, already used for some projects and did some personal projects with it too. </span>
+<br>
+<span>I'm very excited about the next steps and challenges.</span>
 <br>
 <br>
 Good bye and see you soon!
