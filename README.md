@@ -61,7 +61,7 @@
     <li>
         <h3>Git && GitHub</h3>
         <span>To control my code versions, I used git, specifically talking about GitHub that's a good platform and is being bigger every year.</span>
-        <span>I used only to branchs for this project, "master" and "development".</span>
+        <span>I used only two branches for this project, "master" and "development".</span>
     </li>
     <br>
     <li>
@@ -121,6 +121,9 @@
 </div>
 <br>
 
+<span>My code is on <a href="https://github.com/gabrielcarreiraribeiro/react-open-weather-challenge-modec">this</a> GitHub repository.</span>
+<br>
+<br>
 <span>Like I said, the application is hosted on Heroku, and you can access clicking on this button below.</span>
 <br>
 <br>

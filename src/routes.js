@@ -12,8 +12,8 @@ export default function PageRoutes(){
     return (
         <Routes>
             <Route path="/" element={<Login />}/>
-            <Route path="/Home" element={<Home />}/>
-            <Route path="/CityWeatherDetails" element={<CityWeatherDetails />}/>
+            <Route path="/home" element={<Home />}/>
+            <Route path="/cityWeatherDetails" element={<CityWeatherDetails />}/>
         </Routes>
     );
 }
