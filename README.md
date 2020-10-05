@@ -1,18 +1,18 @@
 <h1 style="text-align: center;">Hey! Welcome to my OpenWeather Challenge</h1>
 
-<div width="100%" style="display: flex; justify-content: center;">
+<div width="100%" style="justify-content: center;">
     <img width="256px" height="256px" src="https://avatars1.githubusercontent.com/u/58861192?v=4" style="border-radius: 50%;">
 </div>
 
-<div style="display: flex; align-items: center; justify-content: center; margin: 20px 0 80px 0;">
+<div>
     <a href="https://github.com/gabrielcarreiraribeiro">
-        <div style="display: flex; align-items: center; background-color: #fff; border-radius: 5px; padding: 5px 10px; margin-right: 15px;">
+        <div">
             <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg"/>
             <span style="color: black; font-weight: 500;">GitHub</span>
         </div>
     </a>
     <a href="https://www.linkedin.com/in/gabrielcarreiraribeiro">
-        <div style="display: flex; align-items: center; background-color: #0077B7; border-radius: 5px; padding: 5px 10px;">
+        <div>
             <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/2111/2111532.svg"/>
             <span style="color: black; font-weight: 500;">LinkedIn</span>
         </div>
@@ -26,15 +26,17 @@
 <br>
 <br>
 
-<img width="32px" height="32px" style="float: left; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176218.svg"/>
-<h2>Description</h2>
+<div align="center">
+    <img width="32px" height="32px" style="float: left; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176218.svg"/>
+    <h2>Description</h2>
+</div>
 
 <span>This application is focused on get the weather of a City.</span>
 <span>The user put a pin on the location that he wants to know the weather, click on the button "Search", then the nearest Cities appear and he can chose one to see the weather.</span>
 <br>
 <br>
 
-<div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
+<div align="center">
     <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/900/900618.svg"/>
     <h2>Technologies</h2>
 </div>
@@ -102,7 +104,7 @@
 <br>
 <br>
 
-<div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
+<div align="center">
     <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/922/922656.svg"/>
     <h2>How to Run</h2>
 </div>
@@ -110,15 +112,15 @@
 <span>Like I said, the application is hosted on Heroku, and you can access clicking on this button below.</span>
 <br>
 <br>
-<div  width="100%" style="display: flex; justify-content: center;">
+<div>
     <a href="https://react-open-weather-challenge.herokuapp.com/">
-        <div style="border-radius: 5px; color: #fff; padding: 10px; background-color: #0077b6; width: fit-content; text-decoration: none;">OpenWeather Challenge</div>
+        <div>OpenWeather Challenge</div>
     </a>
 </div>
 
 <br>
 
-<div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
+<div align="center">
     <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/2716/2716350.svg"/>
     <h2>Performance Test</h2>
 </div>
@@ -130,7 +132,7 @@
 <br>
 
 
-<div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
+<div align="center">
     <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/premium-icon/icons/svg/2099/2099430.svg"/>
     <h2>Considerations</h2>
 </div>
