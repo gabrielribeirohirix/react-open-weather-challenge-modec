@@ -26,10 +26,9 @@
 <br>
 <br>
 
-<div style="display: flex; align-items: center; border-bottom: 1px solid #eaecef; padding: 5px 0; margin: 5px 0;">
-    <img width="32px" height="32px" style="margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176218.svg"/>
-    <h2>Description</h2>
-</div>
+<img width="32px" height="32px" style="float: left; margin-right: 10px;" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176218.svg"/>
+<h2>Description</h2>
+
 <span>This application is focused on get the weather of a City.</span>
 <span>The user put a pin on the location that he wants to know the weather, click on the button "Search", then the nearest Cities appear and he can chose one to see the weather.</span>
 <br>
