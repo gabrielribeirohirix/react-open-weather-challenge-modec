@@ -6,19 +6,20 @@ import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
 import CitiesList from '../../components/CitiesList/CitiesList'
 
 import constants from '../../constants'
+import { useSelector } from 'react-redux'
 
 import './Home.css'
 
 export default function Home() {
 
-    let [pin, setPin] = useState({})
     let [citiesList, setCitiesList] = useState([])
+    const currentCountryLocation = useSelector(({countryReducer}) => countryReducer.currentCountry.countryLocation)
 
     async function handleSearchForWeather() {
 
         let weatherReturn = {}
         try {
-            weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${pin.lat}&lon=${pin.lng}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
+            weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${currentCountryLocation.latitude}&lon=${currentCountryLocation.longitude}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
             setCitiesList(weatherReturn.data.list)
         } catch (error) {
             sweetAlert('No Cities were found for this location', {
@@ -27,10 +28,6 @@ export default function Home() {
             })
         }
 
-    }
-
-    function updateMarker(pin) {
-        setPin(pin)
     }
 
     return (
@@ -50,7 +47,7 @@ export default function Home() {
             </div>
 
             <div className="home-body">
-                <GoogleMaps defaultCenter={{ lat: 36.366717, lng: 138.743049 }} defaultZoom={4} updateMarker={updateMarker} showMarker={true} />
+                <GoogleMaps defaultCenter={{ lat: 36.366717, lng: 138.743049 }} defaultZoom={4} showMarker={true} />
                 <CitiesList cities={citiesList} />
             </div>
 
