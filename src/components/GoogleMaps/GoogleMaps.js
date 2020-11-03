@@ -29,15 +29,15 @@ export default function GoogleMaps(props) {
 
     const addPinToMap = async pinReturn => {
 
-        const getContryData = await axios.get(`${constants.googleMapsGetCountryUrl}latlng=${pinReturn.lat},${pinReturn.lng}&key=${constants.googleMapsAPIKey}`)
-        const results = getContryData.data.results
+        const getCountryData = await axios.get(`${constants.googleMapsGetCountryUrl}latlng=${pinReturn.lat},${pinReturn.lng}&key=${constants.googleMapsAPIKey}`)
+        const results = getCountryData.data.results
         let countryCode = ""
         let countryName = ""
 
         if (results && results.length > 0) {
-            const addresComponents = results.pop().address_components.pop()
-            countryCode = addresComponents.short_name
-            countryName = addresComponents.long_name
+            const addressComponents = results.pop().address_components.pop()
+            countryCode = addressComponents.short_name
+            countryName = addressComponents.long_name
         }
 
         dispatch(addCountryCode(countryCode))
