@@ -6,21 +6,25 @@ import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
 import CitiesList from '../../components/CitiesList/CitiesList'
 
 import constants from '../../constants'
-import { useSelector } from 'react-redux'
+import { isObjectEmpty } from '../../utils/variableValidations'
+import { useSelector, useDispatch } from 'react-redux'
+
+import { addCitiesList } from '../../store/Country/Country.actions'
 
 import './Home.css'
 
 export default function Home() {
 
-    let [citiesList, setCitiesList] = useState([])
-    const currentCountryLocation = useSelector(({countryReducer}) => countryReducer.currentCountry.countryLocation)
+    const dispatch = useDispatch()
+    let citiesList = useSelector(({ countryReducer }) => countryReducer.currentCountry.citiesList)
+    const currentCountry = useSelector(({ countryReducer }) => countryReducer.currentCountry)
 
     async function handleSearchForWeather() {
 
         let weatherReturn = {}
         try {
-            weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${currentCountryLocation.latitude}&lon=${currentCountryLocation.longitude}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
-            setCitiesList(weatherReturn.data.list)
+            weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${currentCountry.countryLocation.latitude}&lon=${currentCountry.countryLocation.longitude}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
+            dispatch(addCitiesList(weatherReturn.data.list))
         } catch (error) {
             sweetAlert('No Cities were found for this location', {
                 icon: "error",
@@ -47,7 +51,11 @@ export default function Home() {
             </div>
 
             <div className="home-body">
-                <GoogleMaps defaultCenter={{ lat: 36.366717, lng: 138.743049 }} defaultZoom={4} showMarker={true} />
+                <GoogleMaps
+                    defaultCenter={constants.defaultLatLong}
+                    defaultZoom={4}
+                    showMarker={true}
+                    pin={isObjectEmpty(currentCountry.currentCity) ? null : { lat: currentCountry.currentCity.coord.lat, lng: currentCountry.currentCity.coord.lon, countryCode: currentCountry.countryCode }} />
                 <CitiesList cities={citiesList} />
             </div>
 

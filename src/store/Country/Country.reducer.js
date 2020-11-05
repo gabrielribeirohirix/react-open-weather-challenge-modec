@@ -9,7 +9,7 @@ const INITIAL_STATE = {
             latitude: 0,
             longitude: 0
         },
-        currentCity: ""
+        currentCity: {}
 
     },
     currentProduct: {
@@ -31,6 +31,10 @@ export default function currentCountryReducer(state = INITIAL_STATE, action) {
             return { ...state, currentCountry: { ...state.currentCountry, countryLocation: action.payload } }
         case "ADD_COUNTRY_FLAG_URL":
             return { ...state, currentCountry: { ...state.currentCountry, countryFlag: action.payload } }
+        case "ADD_CITIES_LIST":
+            return { ...state, currentCountry: { ...state.currentCountry, citiesList: action.payload } }
+        case "ADD_SELECTED_CITY":
+            return { ...state, currentCountry: { ...state.currentCountry, currentCity: action.payload } }
 
         default:
             return state

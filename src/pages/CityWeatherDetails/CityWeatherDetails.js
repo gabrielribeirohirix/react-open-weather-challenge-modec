@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useLocation } from 'react-router-dom'
 import Select from 'react-select'
+import { useSelector } from 'react-redux'
 
 import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
 
@@ -10,8 +10,7 @@ import './CityWeatherDetails.css'
 
 export default function CityWeatherDetails() {
 
-    const location = useLocation()
-    const city = JSON.parse(location.state.city)
+    const currentCountry = useSelector(({ countryReducer }) => countryReducer.currentCountry)
 
     let [selectedMeasure, setSelectedMeasure] = useState("celsius")
 
@@ -42,8 +41,8 @@ export default function CityWeatherDetails() {
         <div className="city-weather">
 
             <div className="city-weather-title-container">
-                <span className="city-weather-title">{`${city.name}, ${city.sys.country}`}</span>
-                <img alt="city" src={city.sys.country ? `https://www.countryflags.io/${city.sys.country}/shiny/64.png` : constants.defaultFlagImage} />
+                <span className="city-weather-title">{`${currentCountry.currentCity.name}, ${currentCountry.countryName} (${currentCountry.currentCity.sys.country})`}</span>
+                <img alt="city" src={currentCountry.currentCity.sys.country ? `https://www.countryflags.io/${currentCountry.currentCity.sys.country}/shiny/64.png` : constants.defaultFlagImage} />
             </div>
 
             <Select className="measure-combobox"
@@ -57,22 +56,22 @@ export default function CityWeatherDetails() {
 
                     <div className="weather-card-field">
                         <span>Humidity</span>
-                        <span>{city.main.humidity}%</span>
+                        <span>{currentCountry.currentCity.main.humidity}%</span>
                     </div>
 
                     <div className="weather-card-field">
                         <span>Pressure</span>
-                        <span>{city.main.pressure} hPa</span>
+                        <span>{currentCountry.currentCity.main.pressure} hPa</span>
                     </div>
 
                     <div className="weather-card-field">
                         <span>Clouds</span>
-                        <span>{city.clouds.all}%</span>
+                        <span>{currentCountry.currentCity.clouds.all}%</span>
                     </div>
 
                     <div className="weather-card-field">
                         <span>Wind Speed</span>
-                        <span>{city.wind.speed} Km/h</span>
+                        <span>{currentCountry.currentCity.wind.speed} Km/h</span>
                     </div>
                 </div>
 
@@ -80,22 +79,22 @@ export default function CityWeatherDetails() {
 
                     <div className="weather-card-field">
                         <span>Temperature</span>
-                        <span>{calculateTemperature(selectedMeasure, city.main.temp)}</span>
+                        <span>{calculateTemperature(selectedMeasure, currentCountry.currentCity.main.temp)}</span>
                     </div>
 
                     <div className="weather-card-field">
                         <span>Feels Like</span>
-                        <span>{calculateTemperature(selectedMeasure, city.main.feels_like)}</span>
+                        <span>{calculateTemperature(selectedMeasure, currentCountry.currentCity.main.feels_like)}</span>
                     </div>
 
                     <div className="weather-card-field">
                         <span>Min. Temperature</span>
-                        <span>{calculateTemperature(selectedMeasure, city.main.temp_min)}</span>
+                        <span>{calculateTemperature(selectedMeasure, currentCountry.currentCity.main.temp_min)}</span>
                     </div>
 
                     <div className="weather-card-field">
                         <span>Max. Temperature</span>
-                        <span>{calculateTemperature(selectedMeasure, city.main.temp_max)}</span>
+                        <span>{calculateTemperature(selectedMeasure, currentCountry.currentCity.main.temp_max)}</span>
                     </div>
                 </div>
 
@@ -103,23 +102,28 @@ export default function CityWeatherDetails() {
 
                     <div className="weather-card-field">
                         <span>Weather</span>
-                        <span>{city.weather[0].main}</span>
+                        <span>{currentCountry.currentCity.weather[0].main}</span>
                     </div>
 
                     <div className="weather-card-field">
                         <span>Description</span>
-                        <span>{city.weather[0].description}</span>
+                        <span>{currentCountry.currentCity.weather[0].description}</span>
                     </div>
 
                     <div className="weather-card-field">
                         <span>Coordinates</span>
-                        <span>{`${city.coord.lat}, ${city.coord.lon}`}</span>
+                        <span>{`${currentCountry.currentCity.coord.lat}, ${currentCountry.currentCity.coord.lon}`}</span>
                     </div>
                 </div>
             </div>
 
             <div className="city-weather-details-map">
-                <GoogleMaps defaultCenter={{ lat: city.coord.lat, lng: city.coord.lon }} defaultZoom={6} showMarker={true} pin={{ lat: city.coord.lat, lng: city.coord.lon, countryCode: city.sys.country }} />
+                <GoogleMaps
+                    defaultCenter={{ lat: currentCountry.currentCity.coord.lat, lng: currentCountry.currentCity.coord.lon }}
+                    defaultZoom={6}
+                    showMarker={true}
+                    dynamicStatus={false}
+                    pin={{ lat: currentCountry.currentCity.coord.lat, lng: currentCountry.currentCity.coord.lon, countryCode: currentCountry.currentCity.sys.country }} />
             </div>
         </div>
     )

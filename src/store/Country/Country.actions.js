@@ -25,3 +25,17 @@ export function addCountryName(countryName) {
         payload: countryName
     }
 }
+
+export function addSelectedCity(selectedCity) {
+    return {
+        type: "ADD_SELECTED_CITY",
+        payload: selectedCity
+    }
+}
+
+export function addCitiesList(citiesList) {
+    return {
+        type: "ADD_CITIES_LIST",
+        payload: citiesList
+    }
+}

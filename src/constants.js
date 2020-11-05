@@ -11,7 +11,8 @@ const constants = {
     ],
     googleMapsGetCountryUrl: "https://maps.googleapis.com/maps/api/geocode/json?",
     defaultFlagImage: "https://www.flaticon.com/svg/static/icons/svg/3498/3498149.svg",
-    countryFlagsUrl: "https://www.countryflags.io/"
+    countryFlagsUrl: "https://www.countryflags.io/",
+    defaultLatLong: { lat: 36.366717, lng: 138.743049 }
 }
 
 export default constants

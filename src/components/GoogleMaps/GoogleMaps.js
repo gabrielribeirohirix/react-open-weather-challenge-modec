@@ -9,6 +9,7 @@ import { addCountryCode, addCountryLocation, addCountryName } from '../../store/
 import './GoogleMaps.css'
 
 import constants from '../../constants'
+import { isUndefinedOrNull } from '../../utils/variableValidations'
 
 export default function GoogleMaps(props) {
 
@@ -16,6 +17,8 @@ export default function GoogleMaps(props) {
     let [pin, setPin] = useState({})
     const defaultCenter = props.defaultCenter
     const defaultZoom = props.defaultZoom
+    const dynamicStatus = isUndefinedOrNull(props.dynamicStatus) ? true : props.dynamicStatus
+    console.log("Stop here")
 
     useEffect(() => {
         if (props.pin) {
@@ -29,23 +32,24 @@ export default function GoogleMaps(props) {
 
     const addPinToMap = async pinReturn => {
 
-        const getCountryData = await axios.get(`${constants.googleMapsGetCountryUrl}latlng=${pinReturn.lat},${pinReturn.lng}&key=${constants.googleMapsAPIKey}`)
-        const results = getCountryData.data.results
-        let countryCode = ""
-        let countryName = ""
+        if (dynamicStatus) {
+            const getCountryData = await axios.get(`${constants.googleMapsGetCountryUrl}latlng=${pinReturn.lat},${pinReturn.lng}&key=${constants.googleMapsAPIKey}`)
+            const results = getCountryData.data.results
+            let countryCode = ""
+            let countryName = ""
 
-        if (results && results.length > 0) {
-            const addressComponents = results.pop().address_components.pop()
-            countryCode = addressComponents.short_name
-            countryName = addressComponents.long_name
+            if (results && results.length > 0) {
+                const addressComponents = results.pop().address_components.pop()
+                countryCode = addressComponents.short_name
+                countryName = addressComponents.long_name
+            }
+
+            dispatch(addCountryCode(countryCode))
+            dispatch(addCountryName(countryName))
+            dispatch(addCountryLocation(pinReturn.lat, pinReturn.lng))
+
+            setPin({ lat: pinReturn.lat, lng: pinReturn.lng, countryCode: countryCode })
         }
-
-        dispatch(addCountryCode(countryCode))
-        dispatch(addCountryName(countryName))
-        dispatch(addCountryLocation(pinReturn.lat, pinReturn.lng))
-
-        setPin({ lat: pinReturn.lat, lng: pinReturn.lng, countryCode: countryCode })
-        console.log("TESTANDO")
     }
 
     return (
