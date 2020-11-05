@@ -1,7 +1,9 @@
-export function addCountryFlag(countryFlagUrl) {
+import constants from '../../constants'
+
+export function addCountryFlag(countryCode) {
     return {
         type: "ADD_COUNTRY_FLAG_URL",
-        payload: countryFlagUrl
+        payload: countryCode ? `${constants.countryFlagsUrl + countryCode}/shiny/64.png` : constants.defaultFlagImage
     }
 }
 

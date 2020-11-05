@@ -11,7 +11,7 @@ import './CityWeatherDetails.css'
 export default function CityWeatherDetails() {
 
     const currentCountry = useSelector(({ countryReducer }) => countryReducer.currentCountry)
-
+    
     let [selectedMeasure, setSelectedMeasure] = useState("celsius")
 
     function handleOnChangeMeasure(selected) {

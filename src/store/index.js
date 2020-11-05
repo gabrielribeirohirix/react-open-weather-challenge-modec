@@ -1,7 +1,6 @@
 import { createStore, combineReducers } from 'redux'
 import countryReducer from "../store/Country/Country.reducer"
 
-
 const rootReducer = combineReducers({
     countryReducer
 })

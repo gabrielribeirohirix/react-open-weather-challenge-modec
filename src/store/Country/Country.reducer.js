@@ -1,43 +1,33 @@
-import constants from "../../constants"
+import { saveStateInLocalStorage, loadStateFromLocalStorage } from '../../localStorage'
 
-const INITIAL_STATE = {
-    currentCountry: {
-        countryName: "",
-        countryCode: "",
-        countryFlag: constants.defaultFlagImage,
-        countryLocation: {
-            latitude: 0,
-            longitude: 0
-        },
-        currentCity: {}
-
-    },
-    currentProduct: {
-        productName: "",
-        productValue: 0
-    }
-}
-
-
-export default function currentCountryReducer(state = INITIAL_STATE, action) {
+export default function currentCountryReducer(state = loadStateFromLocalStorage(), action) {
 
     switch (action.type) {
 
         case "ADD_COUNTRY_CODE":
-            return { ...state, currentCountry: { ...state.currentCountry, countryCode: action.payload } }
+            state = { ...state, currentCountry: { ...state.currentCountry, countryCode: action.payload } }
+            break
         case "ADD_COUNTRY_NAME":
-            return { ...state, currentCountry: { ...state.currentCountry, countryName: action.payload } }
+            state = { ...state, currentCountry: { ...state.currentCountry, countryName: action.payload } }
+            break
         case "ADD_COUNTRY_LOCATION":
-            return { ...state, currentCountry: { ...state.currentCountry, countryLocation: action.payload } }
+            state = { ...state, currentCountry: { ...state.currentCountry, countryLocation: action.payload } }
+            break
         case "ADD_COUNTRY_FLAG_URL":
-            return { ...state, currentCountry: { ...state.currentCountry, countryFlag: action.payload } }
+            state = { ...state, currentCountry: { ...state.currentCountry, countryFlag: action.payload } }
+            break
         case "ADD_CITIES_LIST":
-            return { ...state, currentCountry: { ...state.currentCountry, citiesList: action.payload } }
+            state = { ...state, currentCountry: { ...state.currentCountry, citiesList: action.payload } }
+            break
         case "ADD_SELECTED_CITY":
-            return { ...state, currentCountry: { ...state.currentCountry, currentCity: action.payload } }
-
+            state = { ...state, currentCountry: { ...state.currentCountry, currentCity: action.payload } }
+            break
         default:
-            return state
+            break
     }
+
+    saveStateInLocalStorage(state)
+
+    return state
 
 }

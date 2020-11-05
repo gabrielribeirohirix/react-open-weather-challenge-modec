@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
-import { addSelectedCity } from '../../store/Country/Country.actions'
+import { addCountryCode, addCountryLocation, addCountryName, addCitiesList, addCountryFlag, addSelectedCity } from '../../store/Country/Country.actions'
 
 import './CitiesList.css'
 
@@ -12,7 +12,14 @@ export default function CitiesList(props) {
     const dispatch = useDispatch()
 
     function handleSelectCity(city) {
+
         dispatch(addSelectedCity(city))
+        dispatch(addCitiesList(props.cities))
+        dispatch(addCountryCode(props.currentCountry.countryCode))
+        dispatch(addCountryName(props.currentCountry.countryName))
+        dispatch(addCountryLocation(props.currentCountry.countryLocation.latitude, props.currentCountry.countryLocation.longitude))
+        dispatch(addCountryFlag(props.currentCountry.countryCode))
+
         navigate("/CityWeatherDetails")
     }
 

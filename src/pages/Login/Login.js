@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import constants from '../../constants'
+import { clearLocalStorage } from '../../localStorage'
 
 import backgroundVideo from '../../assets/videos/clouds_video.mp4'
 
@@ -11,6 +12,11 @@ export default function Login() {
 
     const onNavigate = useNavigate()
 
+    function handleGetStarted() {
+        clearLocalStorage()
+        onNavigate("/Home")
+    }
+
     return (
         <div className="login-container">
 
@@ -18,15 +24,15 @@ export default function Login() {
                 className="background-video-login"
                 loop
                 autoPlay
-                muted/>
+                muted />
 
             <div className="title-container" />
 
             <img className="open-weather-logo" src={constants.openWeatherLogoUrl} alt="Open Weather Logo" />
-            
+
             <span className="login-title">Welcome to my OpenWeather Challenge!</span>
-            
-            <div onClick={() => onNavigate("/Home")} className="get-started-button">
+
+            <div onClick={() => handleGetStarted()} className="get-started-button">
                 <span>Get Started</span>
             </div>
 

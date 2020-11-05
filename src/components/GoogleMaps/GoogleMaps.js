@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux'
 
 import Marker from './Marker'
 
-import { addCountryCode, addCountryLocation, addCountryName } from '../../store/Country/Country.actions'
 import './GoogleMaps.css'
 
 import constants from '../../constants'
@@ -18,7 +17,7 @@ export default function GoogleMaps(props) {
     const defaultCenter = props.defaultCenter
     const defaultZoom = props.defaultZoom
     const dynamicStatus = isUndefinedOrNull(props.dynamicStatus) ? true : props.dynamicStatus
-    console.log("Stop here")
+
 
     useEffect(() => {
         if (props.pin) {
@@ -44,9 +43,18 @@ export default function GoogleMaps(props) {
                 countryName = addressComponents.long_name
             }
 
-            dispatch(addCountryCode(countryCode))
-            dispatch(addCountryName(countryName))
-            dispatch(addCountryLocation(pinReturn.lat, pinReturn.lng))
+            // dispatch(addCountryCode(countryCode))
+            // dispatch(addCountryName(countryName))
+            // dispatch(addCountryLocation(pinReturn.lat, pinReturn.lng))
+            // dispatch(addCountryFlag(countryFlagUrl))
+
+            const selectedCountry = {
+                countryCode: countryCode,
+                countryName: countryName,
+                countryLocation: { latitude: pinReturn.lat, longitude: pinReturn.lng }
+            }
+
+            props.onCountrySelect(selectedCountry)
 
             setPin({ lat: pinReturn.lat, lng: pinReturn.lng, countryCode: countryCode })
         }

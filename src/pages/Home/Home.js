@@ -9,22 +9,28 @@ import constants from '../../constants'
 import { isObjectEmpty } from '../../utils/variableValidations'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { addCitiesList } from '../../store/Country/Country.actions'
+
 
 import './Home.css'
 
 export default function Home() {
 
-    const dispatch = useDispatch()
-    let citiesList = useSelector(({ countryReducer }) => countryReducer.currentCountry.citiesList)
+    let [citiesList, setCitiesList] = useState(useSelector(({ countryReducer }) => countryReducer.currentCountry.citiesList))
     const currentCountry = useSelector(({ countryReducer }) => countryReducer.currentCountry)
+
+    const [countryLocalState, setCountryLocalState] = useState({})
+
+
+    function setSelectedCountry(countryReceived) {
+        setCountryLocalState(countryReceived)
+    }
 
     async function handleSearchForWeather() {
 
         let weatherReturn = {}
         try {
-            weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${currentCountry.countryLocation.latitude}&lon=${currentCountry.countryLocation.longitude}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
-            dispatch(addCitiesList(weatherReturn.data.list))
+            weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${countryLocalState.countryLocation.latitude}&lon=${countryLocalState.countryLocation.longitude}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
+            setCitiesList(weatherReturn.data.list)
         } catch (error) {
             sweetAlert('No Cities were found for this location', {
                 icon: "error",
@@ -52,11 +58,15 @@ export default function Home() {
 
             <div className="home-body">
                 <GoogleMaps
-                    defaultCenter={constants.defaultLatLong}
+                    defaultCenter={currentCountry.countryLocation ? { lat: currentCountry.countryLocation.latitude, lng: currentCountry.countryLocation.longitude } : constants.defaultLatLong}
                     defaultZoom={4}
                     showMarker={true}
-                    pin={isObjectEmpty(currentCountry.currentCity) ? null : { lat: currentCountry.currentCity.coord.lat, lng: currentCountry.currentCity.coord.lon, countryCode: currentCountry.countryCode }} />
-                <CitiesList cities={citiesList} />
+                    onCountrySelect={setSelectedCountry}
+                    pin={isObjectEmpty(countryLocalState) ?
+                        (isObjectEmpty(currentCountry.currentCity) ? null : { lat: currentCountry.countryLocation.latitude, lng: currentCountry.countryLocation.longitude, countryCode: currentCountry.countryCode }) :
+                        { lat: countryLocalState.countryLocation.latitude, lng: countryLocalState.countryLocation.longitude, countryCode: countryLocalState.countryCode }}
+                />
+                <CitiesList cities={citiesList} currentCountry={countryLocalState} />
             </div>
 
 
