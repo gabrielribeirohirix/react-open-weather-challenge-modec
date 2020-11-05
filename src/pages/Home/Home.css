@@ -21,7 +21,7 @@
   flex-direction: column;
   line-height: 20px;
   text-align: left;
-  align-items: end;
+  align-items: flex-start;
   width: 80vw;
 }
 
