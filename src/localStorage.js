@@ -19,6 +19,9 @@ const INITIAL_STATE = {
     }
 }
 
+export function getInitialState() {
+    return INITIAL_STATE
+}
 
 export function loadStateFromLocalStorage() {
 

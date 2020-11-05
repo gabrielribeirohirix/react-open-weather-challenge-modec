@@ -1,4 +1,4 @@
-import { saveStateInLocalStorage, loadStateFromLocalStorage } from '../../localStorage'
+import { saveStateInLocalStorage, loadStateFromLocalStorage, getInitialState } from '../../localStorage'
 
 export default function currentCountryReducer(state = loadStateFromLocalStorage(), action) {
 
@@ -21,6 +21,9 @@ export default function currentCountryReducer(state = loadStateFromLocalStorage(
             break
         case "ADD_SELECTED_CITY":
             state = { ...state, currentCountry: { ...state.currentCountry, currentCity: action.payload } }
+            break
+        case "USER_LOGOUT":
+            state = getInitialState()
             break
         default:
             break

@@ -81,6 +81,11 @@
     </li>
     <br>
     <li>
+        <h3>Redux</h3>
+        <span>To control the states of this application, I used redux that is a Flux pattern for component communication. Just to keep the user selections, I used local storage either to save important information about the application state.</span>
+    </li>
+    <br>
+    <li>
         <h3>Google Maps API (google-map-react)</h3>
         <span>The most popular API to use a map.</span>
     </li>
@@ -160,7 +165,8 @@
 </div>
 <br>
 
-<span>First of all, I want to thank Modec for the invitation to participate in this challenge, I'm very happy about the result.
+<span>First of all, I want to thank the persons that gave me this idea about the challenge, I'm very happy about the result.
+</span>
 <br>
 <span>I like ReactJS, I think this is a good framework to develop websites and I'm very comfortable to work with. Actually I don't use on my work, already used for some projects and did some personal projects with it too. </span>
 <br>

@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 
 import constants from '../../constants'
 import { clearLocalStorage } from '../../localStorage'
+import { clearCountryStorage } from '../../store/Country/Country.actions'
+import { useDispatch } from 'react-redux'
 
 import backgroundVideo from '../../assets/videos/clouds_video.mp4'
 
@@ -11,9 +13,11 @@ import './Login.css'
 export default function Login() {
 
     const onNavigate = useNavigate()
+    const dispatch = useDispatch()
 
     function handleGetStarted() {
         clearLocalStorage()
+        dispatch(clearCountryStorage())
         onNavigate("/Home")
     }
 

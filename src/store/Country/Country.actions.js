@@ -41,3 +41,10 @@ export function addCitiesList(citiesList) {
         payload: citiesList
     }
 }
+
+export function clearCountryStorage(){
+    return {
+        type: "USER_LOGOUT",
+        payload: undefined
+    }
+}

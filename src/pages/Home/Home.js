@@ -7,7 +7,7 @@ import CitiesList from '../../components/CitiesList/CitiesList'
 
 import constants from '../../constants'
 import { isObjectEmpty } from '../../utils/variableValidations'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 
 
@@ -28,9 +28,15 @@ export default function Home() {
     async function handleSearchForWeather() {
 
         let weatherReturn = {}
+
         try {
-            weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${countryLocalState.countryLocation.latitude}&lon=${countryLocalState.countryLocation.longitude}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
+
+            let latitude = countryLocalState.countryLocation ? countryLocalState.countryLocation.latitude : currentCountry.countryLocation.latitude
+            let longitude = countryLocalState.countryLocation ? countryLocalState.countryLocation.longitude : currentCountry.countryLocation.longitude
+            
+            weatherReturn = await axios.get(`${constants.openWeatherAPIUrl}lat=${latitude}&lon=${longitude}&cnt=15&APPID=${constants.openWeatherAPIKey}`)
             setCitiesList(weatherReturn.data.list)
+
         } catch (error) {
             sweetAlert('No Cities were found for this location', {
                 icon: "error",
@@ -66,7 +72,7 @@ export default function Home() {
                         (isObjectEmpty(currentCountry.currentCity) ? null : { lat: currentCountry.countryLocation.latitude, lng: currentCountry.countryLocation.longitude, countryCode: currentCountry.countryCode }) :
                         { lat: countryLocalState.countryLocation.latitude, lng: countryLocalState.countryLocation.longitude, countryCode: countryLocalState.countryCode }}
                 />
-                <CitiesList cities={citiesList} currentCountry={countryLocalState} />
+                <CitiesList cities={citiesList} currentCountry={isObjectEmpty(countryLocalState) ? currentCountry : countryLocalState} />
             </div>
 
 
